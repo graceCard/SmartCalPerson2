@@ -11,9 +11,27 @@
   padding: 0.5rem 0.5rem 0 4.5rem;
 }
 
+.week-calendar--day .week-calendar__day-of-week-list {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  justify-items: center;
+  /*'Day, #' at top of day view select wasn't centered, fixed with AI*/
+}
+
 .week-calendar__day-of-week-element {
   display: flex;
   justify-content: center;
+}
+
+
+.week-calendar__day-of-week-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+  /*'Day, #' in day view select had a grey box around it. It was supposed to have a transparent background, only becoming grey when hovered.
+AI fix by adding .week-calendar__day-of-week-button{} .*/
 }
 
 .week-calendar__day-of-week-button-element {
@@ -55,6 +73,10 @@
   padding-left: 4.5rem;
 }
 
+.week-calendar--day .week-calendar__all-day-list {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .week-calendar__all-day-list::after {
   content: "";
   position: absolute;
@@ -73,6 +95,7 @@
   position: relative;
   flex: 1;
 }
+
 .week-calendar__content-inner {
   position: absolute;
   left: 0;
@@ -98,15 +121,19 @@
   color: var(--color-gray-500);
 }
 
-.week-calendar__columns{
+.week-calendar__columns {
   flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   padding-top: 0.75rem;
 }
 
-.week-calendar__column{
-position: relative;
+.week-calendar--day .week-calendar__columns {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.week-calendar__column {
+  position: relative;
 }
 
 .week-calendar__cell {
