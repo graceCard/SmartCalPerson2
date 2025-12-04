@@ -1,14 +1,18 @@
-@import "./nav.css";
-@import "./sidebar.css";
 @import "./button.css";
-@import "./responsive.css";
-@import "./select.css";
-@import "./month-calendar.css";
+@import "./color-select.css";
+@import "./dialog.css";
 @import "./event-list.css";
 @import "./event.css";
-@import "./week-calendar.css";
+@import "./form.css";
+@import "./input.css";
+@import "./nav.css";
+@import "./month-calendar.css";
 @import "./scroll.css";
-@import "./dialog.css";
+@import "./select.css";
+@import "./sidebar.css";
+@import "./toaster.css";
+@import "./week-calendar.css";
+@import "./responsive.css";
 
 * {
   font-family: ui-sans-serif, system-ui, sans-serif;
@@ -30,7 +34,6 @@ body {
   --font-size-lg: 1.125rem;
   --font-size-2xl: 1.5rem;
 
-
   --line-height-xs: 1rem;
   --line-height-sm: 1.25rem;
   --line-height-md: 1.5rem;
@@ -40,11 +43,15 @@ body {
   --border-radius-md: 0.25rem;
 
   --duration-sm: 100ms;
-  --duration-sm: 300ms;
-
+  --duration-md: 300ms;
+  --duration-2xl: 3000ms;
 
   --color-blue-500: #3b82f6;
   --color-blue-600: #2563eb;
+
+  --color-red-600: #dc2626;
+
+  --color-green-600: #16a34a;
 
   --color-gray-100: #f3f4f6;
   --color-gray-300: #d1d5db;
@@ -53,7 +60,6 @@ body {
 
   --color-white: #ffffff;
   --color-black: #000000;
-  
 
   --color-text-light: #f9fafb;
   --color-text-dark: #030712;

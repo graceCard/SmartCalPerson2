@@ -1,8 +1,7 @@
-import { waitUntilAnimationsFinish } from "./animations.js";
+import { waitUntilAnimationsFinish } from "./animation.js";
 
 export function initDialog(name) {
   const dialogElement = document.querySelector(`[data-dialog=${name}]`);
-
   const closeButtonElements = document.querySelectorAll("[data-dialog-close-button]");
 
   function close() {
@@ -33,9 +32,10 @@ export function initDialog(name) {
   dialogElement.addEventListener("cancel", (event) => {
     event.preventDefault();
     close();
-  })
+  });
 
   return {
+    dialogElement,
     open() {
       dialogElement.showModal();
     },

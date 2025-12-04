@@ -8,16 +8,16 @@ export function initCalendar() {
 
     if (selectedView === "month") {
       monthCalendarElement.style.display = "flex";
-      weekCalendarElement.style.display= "none";
-      dayCalendarElement.style.display= "none";
-    }else if (selectedView === "week"){
+      weekCalendarElement.style.display = "none";
+      dayCalendarElement.style.display = "none";
+    } else if (selectedView === "week") {
       monthCalendarElement.style.display = "none";
-      dayCalendarElement.style.display= "none";
-      weekCalendarElement.style.display= "flex";
-    }else {
+      weekCalendarElement.style.display = "flex";
+      dayCalendarElement.style.display = "none";
+    } else {
       monthCalendarElement.style.display = "none";
-      weekCalendarElement.style.display= "none";
-      dayCalendarElement.style.display= "flex";
+      weekCalendarElement.style.display = "none";
+      dayCalendarElement.style.display = "flex";
     }
   });
 }
